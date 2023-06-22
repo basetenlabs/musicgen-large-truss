@@ -62,3 +62,14 @@ curl -X POST " https://app.baseten.co/models/YOUR_MODEL_ID/predict" \
            "prompts": ["happy rock" "energetic EDM", "sad jazz"], "duration": 8
          }'
 ```
+
+## Model sizes
+
+MusicGen supports four model sizes:
+
+- `small`: 300M model, text to music only
+- `medium`: 1.5B model, text to music only
+- `melody`: 1.5B model, text to music and text+melody to music
+- `large`: 3.3B model, text to music only
+
+This truss can been configured to run the large size but you can easily select other versions by changing the `MODEL_SIZE` constant in `model/model.py`.

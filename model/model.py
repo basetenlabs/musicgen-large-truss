@@ -4,10 +4,12 @@ import tempfile
 from audiocraft.data.audio import audio_write
 from audiocraft.models import MusicGen
 
+MODEL_SIZE = "large"
+
 
 class Model:
     def load(self):
-        self.model = MusicGen.get_pretrained("large", device="cuda")
+        self.model = MusicGen.get_pretrained(MODEL_SIZE, device="cuda")
 
     def predict(self, request):
         try:
