@@ -14,12 +14,7 @@ model_metadata:
   cover_image_url: https://cdn.baseten.co/production/static/explore/musicgen-cover.png
   tags:
   - text-to-music
-  example:
-    prompts:
-      - "happy rock"
-      - "energetic EDM"
-      - "sad jazz"
-    duration: 8
+  example_model_input: { "prompts": ["happy rock", "energetic EDM", "sad jazz"], "duration": 8 }
 model_module_dir: model
 model_name: MusicGen large
 model_type: custom
