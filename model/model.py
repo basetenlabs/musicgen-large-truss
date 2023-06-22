@@ -12,7 +12,7 @@ class Model:
     def predict(self, request):
         try:
             prompts = request.pop("prompts")
-            duration = request.pop("duration") or 8
+            duration = request.pop("duration") if "duration" in request else 8
             self.model.set_generation_params(duration=duration)
             wav = self.model.generate(prompts)
             output_files = []
