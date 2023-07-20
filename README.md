@@ -32,7 +32,7 @@ import baseten
 import truss
 
 musicgen_truss = truss.load('.')
-baseten.deploy(musicgen_truss)
+baseten.deploy(musicgen_truss, model_name="MusicGen")
 ```
 
 ## Invoking MusicGen
@@ -43,7 +43,7 @@ MusicGen takes a list of prompts and a duration in seconds. It will generate one
 import baseten
 
 model = baseten.deployed_model_id("YOUR MODEL ID")
-model_output = model.predict({"prompts": ["happy rock" "energetic EDM", "sad jazz"], "duration": 8})
+model_output = model.predict({"prompts": ["happy rock", "energetic EDM", "sad jazz"], "duration": 8})
 
 import base64
 
@@ -72,4 +72,4 @@ MusicGen supports four model sizes:
 - `melody`: 1.5B model, text to music and text+melody to music
 - `large`: 3.3B model, text to music only
 
-This truss can been configured to run the large size but you can easily select other versions by changing the `MODEL_SIZE` constant in `model/model.py`.
+This Truss can been configured to run the large size but you can easily select other versions by changing the `MODEL_SIZE` constant in `model/model.py`.
